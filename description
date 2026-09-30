@@ -1,1 +1,24 @@
-Unnamed repository; edit this file 'description' to name the repository.
+Text-to-SQL Gemini Agent:-
+This project bridges the gap between everyday language and complex databases. Built using Google Gemini, this intelligent agent allows anyone to ask questions in plain English and instantly receive accurate, production-ready SQL queries.
+
+Technologies Used:-
+• Google Gemini LLM: The core "brain" that understands human language and knows how to write code.
+• Python: The main programming language used to tie the entire application logic together.
+• LangChain: The framework used to orchestrate the agent's flow, manage memory, and handle database tools.
+• SQLite: A toolkit that safely connects the agent to various SQL databases.
+• Streamlit: Used to build a clean, user-friendly chat interface.
+
+Process Of Execution: -
+1. The Ask: A user types a normal question (e.g., "Who were our top 3 students in the class").
+2. Schema Inspection: The system dynamically grabs the relevant database layout so Gemini knows what tables exist.
+3. Drafting the Query: Gemini processes the question + the database layout, then writes a draft SQL query.
+4. Self-Correction & Validation: Before showing the result, the agent runs the SQL query against a mock compiler or a safe check layer to ensure the syntax is error-free.
+5. The Delivery: The agent outputs the clean SQL query, and optionally, fetches and displays the actual data rows in a neat table.
+
+Setup and Execution: -
+1. Clone the Repo: Open your terminal and run git clone <your-repo-link> to copy the project files to your computer.
+2. Install Dependencies: Navigate into the project folder and run pip install -r requirements.txt to install all required libraries.
+3. Add Your Keys: Create a file named .env in the root folder and add your credentials (like GEMINI_API_KEY and your database path).
+4. Run the App: Launch the chat interface by running streamlit run app.py to start interacting safely with your database in plain English.
+
+
